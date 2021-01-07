@@ -1,15 +1,14 @@
+import BaseLayout from '../components/layouts/BaseLayout'
+import BasePage from '../components/BasePage'
 
-import React from 'react';
-import BaseLayout from '../components/layouts/BaseLayout';
-
-class Blogs extends React.Component {
-  render() {
-    return (
-      <BaseLayout>
+const Blogs = () => {
+  return (
+    <BaseLayout>
+      <BasePage>
         <h1>I am Blog Page</h1>
-      </BaseLayout>
-    )
-  }
+      </BasePage>
+    </BaseLayout>
+  )
 }
 
-export default Blogs;
+export default Blogs

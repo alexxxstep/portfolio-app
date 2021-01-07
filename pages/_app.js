@@ -1,27 +1,23 @@
+import React from 'react'
 
-import React from 'react';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "../styles/main.scss";
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '../styles/main.scss'
 
 class App extends React.Component {
-
   static async getInitialProps({Component, ctx}) {
-    let pageProps = {};
+    let pageProps = {}
 
     if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
+      pageProps = await Component.getInitialProps(ctx)
     }
 
-    return { pageProps };
+    return {pageProps}
   }
 
   render() {
-    debugger
-    const { Component, pageProps } = this.props;
+    const {Component, pageProps} = this.props
     return <Component {...pageProps} />
   }
 }
 
-export default App;
+export default App
