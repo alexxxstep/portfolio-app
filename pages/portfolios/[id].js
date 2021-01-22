@@ -1,8 +1,8 @@
-import BaseLayout from '../components/layouts/BaseLayout'
+import BaseLayout from '@/components/layouts/BaseLayout'
 import axios from 'axios'
-import BasePage from '../components/BasePage'
+import BasePage from '@/components/BasePage'
 
-const Portfolio = ({portfolio}) => {
+const Portfolio = ({ portfolio }) => {
   return (
     <BaseLayout>
       <BasePage>
@@ -15,7 +15,7 @@ const Portfolio = ({portfolio}) => {
   )
 }
 
-Portfolio.getInitialProps = async ({query}) => {
+Portfolio.getInitialProps = async ({ query }) => {
   let post = {}
   try {
     const res = await axios.get(
@@ -26,7 +26,7 @@ Portfolio.getInitialProps = async ({query}) => {
     console.error(e)
   }
 
-  return {portfolio: post}
+  return { portfolio: post }
 }
 
 export default Portfolio
